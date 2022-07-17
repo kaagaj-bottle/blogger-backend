@@ -24,7 +24,7 @@ describe("total likes", () => {
 
   list = [{ likes: 10 }, { likes: 399 }, { likes: 32 }];
 
-  test.only("of a bigger list is calculated right", () => {
+  test("of a bigger list is calculated right", () => {
     const result = listHelper.totalLikes(list);
     expect(result).toBe(10 + 399 + 32);
   });
