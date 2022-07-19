@@ -27,11 +27,11 @@ blogsRouter.post("/", async (request, response) => {
   });
 
   const savedBlog = await newBlog.save();
-  response.json(savedBlog);
+  response.status(201).json(savedBlog);
 });
 
 blogsRouter.delete("/:id", async (request, response) => {
-  Blog.findByIdAndRemove(request.params.id);
+  await Blog.findByIdAndRemove(request.params.id);
   response.status(204).end();
 });
 
