@@ -46,6 +46,16 @@ describe("test on database", () => {
     expect(res.body).toHaveLength(blogs.length);
   }, 10000000);
 
+  test.only("if url and title are absent 404 Bad request ", async () => {
+    const newBlog = new Blog({
+      title: "",
+      author: "",
+      url: "",
+      likes: "",
+    });
+    await api.post("/api/blogs").send(newBlog).expect(400);
+  }, 10000000);
+
   afterAll(() => {
     mongoose.connection.close();
   });
