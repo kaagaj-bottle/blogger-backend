@@ -13,7 +13,6 @@ usersRouter.get("/", async (request, response) => {
 });
 
 usersRouter.post("/", async (request, response) => {
-  console.log(request.body);
   const { username, name, password } = request.body;
   const doesUserExist = await User.findOne({ username });
 
@@ -24,10 +23,7 @@ usersRouter.post("/", async (request, response) => {
   }
 
   const saltRounds = 10;
-  const passwordHash = await bcrypt.hash(password, saltRounds, (err, hash) => {
-    console.log(err);
-    console.log(hash);
-  });
+  const passwordHash = await bcrypt.hash(password, saltRounds);
 
   const user = new User({
     username,

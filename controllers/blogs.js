@@ -29,12 +29,12 @@ blogsRouter.post("/", async (request, response) => {
     author: body.author,
     url: body.url,
     likes: body.likes,
-    user: user._id,
+    user: user.id,
   });
 
   if (newBlog.title && newBlog.url) {
     const savedBlog = await newBlog.save();
-    user.blogs = user.blogs.concat(savedBlog._id);
+    user.blogs = user.blogs.concat(savedBlog.id);
     await user.save();
     response.status(201).json([savedBlog]);
   } else {
