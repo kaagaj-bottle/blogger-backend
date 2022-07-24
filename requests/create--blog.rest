@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title":"new blog with assigned user",
+    "author":"El Storko",
+    "url":"www.furious5.com",
+    "likes":"232",
+    "userId":"62dd42da0260f393b448ab0c"
+}
