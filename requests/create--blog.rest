@@ -1,6 +1,6 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ilppc2hhbiBTaWRkaXF1ZSIsImlkIjoiNjJkZDY0NGRmYWY0YjQ3OWVkZDk1NGNjIiwiaWF0IjoxNjU4Njc3OTg0fQ.8l7uUVg9lF1xFKFhwxum9t-kgZUM34DrBfk12fqF
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ilppc2hhbiBTaWRkaXF1ZSIsImlkIjoiNjJkZDY0NGRmYWY0YjQ3OWVkZDk1NGNjIiwiaWF0IjoxNjU4NjgxODU1LCJleHAiOjE2NTg2ODU0NTV9.gDhCeGMJ7hl0qv628YcWQC0ObqEU5DgcpmrpFPR--6o
 
 {
     "title":"new blog with assigned user",
