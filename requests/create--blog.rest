@@ -1,9 +1,9 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZhcmhlcmlvbSIsImlkIjoiNjJkZDY1MjVhMDJlYzlmZDllMGI2MTdiIiwiaWF0IjoxNjU4Njg2NDQxLCJleHAiOjE2NTg2OTAwNDF9.A00ZfpE9LyxDVJiQJtjjl8g1bMLNVIHjhd3em4xDTLM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZhcmhlcmlvbSIsImlkIjoiNjJkZDY1MjVhMDJlYzlmZDllMGI2MTdiIiwiaWF0IjoxNjU4ODMzMDQyLCJleHAiOjE2NTg4MzY2NDJ9.x17rwJzF_BKbO5tZTNuyHIRV1flY6W8PD2YOWzI-hz0
 
 {
-    "title":"new blog with assigned user",
+    "title":"after login",
     "author":"El Storko",
     "url":"www.furious5.com",
     "likes":"232",
