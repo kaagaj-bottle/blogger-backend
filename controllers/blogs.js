@@ -87,4 +87,12 @@ blogsRouter.put("/:id", async (request, response) => {
   response.json(updatedBlog);
 });
 
+blogsRouter.get("/user/:username", async (request, response) => {
+  const username = request.params.username;
+  const user = await User.findOne({ username });
+  const userId = user.id;
+  const userBlogs = await Blog.find({ user });
+  response.send(userBlogs);
+});
+
 module.exports = blogsRouter;

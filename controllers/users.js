@@ -36,13 +36,6 @@ usersRouter.post("/", async (request, response) => {
   response.status(201).json(savedUser);
 });
 
-usersRouter.get("/blogs", async (request, response) => {
-  const body = request.body;
-  const username = body.username;
-  const user = await User.findOne({ username });
-  const userId = user.id;
-  const userBlogs = await Blog.find({ user });
-  response.send(userBlogs);
-});
+
 
 module.exports = usersRouter;
