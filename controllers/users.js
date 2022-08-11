@@ -1,6 +1,7 @@
 const User = require("../models/user");
 require("express-async-errors");
 const bcrypt = require("bcrypt");
+const Blog = require("../models/blog");
 const usersRouter = require("express").Router();
 
 usersRouter.get("/", async (request, response) => {
@@ -33,6 +34,15 @@ usersRouter.post("/", async (request, response) => {
 
   const savedUser = await user.save();
   response.status(201).json(savedUser);
+});
+
+usersRouter.get("/blogs", async (request, response) => {
+  const body = request.body;
+  const username = body.username;
+  const user = await User.findOne({ username });
+  const userId = user.id;
+  const userBlogs = await Blog.find({ user });
+  response.send(userBlogs);
 });
 
 module.exports = usersRouter;

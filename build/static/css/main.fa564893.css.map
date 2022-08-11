@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.fa564893.css","mappings":"AAAA,EACE,qBACF,CAEA,MACE,qBAAuB,CACvB,WACF","sources":["components/Blog.css"],"sourcesContent":["* {\n  box-sizing: border-box;\n}\n\n.blog {\n  border: 1px solid black;\n  margin: 1rem;\n}\n"],"names":[],"sourceRoot":""}
