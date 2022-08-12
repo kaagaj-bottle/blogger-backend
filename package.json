@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test jest --verbose --runInBand --forceExit",
-    "build:ui":"rm -rf build && cd ../../react-js/bloglist-frontend && npm run build && cp -r build ../../node-js/blogger"
+    "build:ui": "rm -rf build && cd ../../react-js/blogger-frontend && npm run build && cp -r build ../../node-js/blogger"
   },
   "author": "Zishan Siddique",
   "license": "MIT",
